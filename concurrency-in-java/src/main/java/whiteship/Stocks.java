@@ -1,9 +1,8 @@
 package whiteship;
 
 /**
- * @author: nbp
+ * @author: Keesun Baik
  */
-//Stocks.java
 public class Stocks {
     public static final String[] tickers = {
             "AAPL", "AMD", "CSCO", "GOOG", "HPQ", "INTC", "MSFT", "ORCL", "QCOM", "XRX"

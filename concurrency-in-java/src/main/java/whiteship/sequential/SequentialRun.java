@@ -1,7 +1,7 @@
 package whiteship.sequential;
 
 /**
- * @author: nbp
+ * @author: Keesun Baik
  */
 import whiteship.AbstractRun;
 import whiteship.Stocks;

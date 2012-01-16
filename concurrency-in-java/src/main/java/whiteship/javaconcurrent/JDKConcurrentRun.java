@@ -1,7 +1,7 @@
 package whiteship.javaconcurrent;
 
 /**
- * @author: nbp
+ * @author: Keesun Baik
  */
 
 import whiteship.AbstractRun;

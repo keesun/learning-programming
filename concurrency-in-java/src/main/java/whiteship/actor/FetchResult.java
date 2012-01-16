@@ -1,7 +1,7 @@
 package whiteship.actor;
 
 /**
- * @author: nbp
+ * @author: Keesun Baik
  */
 public class FetchResult {
 

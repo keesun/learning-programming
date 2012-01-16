@@ -1,7 +1,7 @@
 package whiteship.stm;
 
 /**
- * @author: nbp
+ * @author: Keesun Baik
  */
 
 import java.util.Map;
@@ -19,7 +19,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 
 public class STMRun extends AbstractRun {
-
 
     protected Map<String, Object> computeFinancials() {
         final Ref lowPricedTicker = new Ref("");
