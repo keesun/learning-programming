@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>concurrency-in-java</module>
+        <module>spring3.1</module>
     </modules>
 
 
