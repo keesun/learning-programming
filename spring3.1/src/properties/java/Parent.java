@@ -8,6 +8,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
+import javax.annotation.PostConstruct;
+
 /**
  * @author Keesun Baik
  */
@@ -18,8 +20,15 @@ public class Parent {
 	@Autowired Environment env;
 
 	@Bean
+	public static PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+	
+	@Value("${name}") String name1;
+
+	@Bean
 	public String name1(){
-		return new String(env.getProperty("name"));
+		return new String(name1);
 	}
 
 }

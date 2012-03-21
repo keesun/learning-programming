@@ -29,7 +29,7 @@ public class PropertiesTests {
 		/**
 		 * 여기 보세요.
 		 */
-		assertThat(parentContext.getEnvironment().getProperty("name"), is("keesun"));
+//		assertThat(parentContext.getEnvironment().getProperty("name"), is("keesun"));
 
 		String name1 = childContext.getBean("name1", String.class);
 		String name2 = childContext.getBean("name2", String.class);

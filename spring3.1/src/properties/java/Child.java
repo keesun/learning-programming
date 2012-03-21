@@ -14,11 +14,15 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class Child {
 
-	@Autowired
-	Environment environment;
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+
+	@Value("${name}") String name2;
 
 	@Bean
 	public String name2(){
-		return new String(environment.getProperty("name"));
+		return new String(name2);
 	}
 }
