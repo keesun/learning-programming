@@ -22,5 +22,4 @@ public class WorkConfig {
 		return service;
 	}
 
-
 }
