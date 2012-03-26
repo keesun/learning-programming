@@ -9,9 +9,7 @@ import java.lang.annotation.RetentionPolicy;
  * @author Keesun Baik
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Import(WorkConfigBeanDefinitionRegistrar.class)
+@Import(WorkConfig.class)
 public @interface EnableWorkHard {
-	
-	int hardness() default 5;
 
 }

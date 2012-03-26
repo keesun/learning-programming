@@ -10,21 +10,17 @@ import org.springframework.core.type.AnnotationMetadata;
  * @author Keesun Baik
  */
 @Configuration
-public class WorkConfig implements ImportAware {
+public class WorkConfig {
+
+	@Autowired WorkServiceConfigurer workServiceConfigurer;
 
 	@Bean
 	public WorkHardService workHardService(){
 		WorkHardService service = new WorkHardService();
 		service.setHardness(5);
+		workServiceConfigurer.configure(service);
 		return service;
 	}
 
-	@Autowired WorkHardService workHardService;
 
-
-	@Override
-	public void setImportMetadata(AnnotationMetadata importMetadata) {
-		int hardness = (Integer)importMetadata.getAnnotationAttributes(EnableWorkHard.class.getName()).get("hardness");
-		workHardService.setHardness(hardness);
-	}
 }

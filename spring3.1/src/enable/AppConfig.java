@@ -8,7 +8,11 @@ import org.springframework.context.annotation.Import;
  * @author Keesun Baik
  */
 @Configuration
-@EnableWorkHard(hardness = 5)
-public class AppConfig {
+@EnableWorkHard
+public class AppConfig implements WorkServiceConfigurer{
 
+	@Override
+	public void configure(WorkHardService workHardService) {
+		workHardService.setHardness(10);
+	}
 }
