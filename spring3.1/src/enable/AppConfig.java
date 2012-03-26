@@ -1,17 +1,14 @@
 package enable;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * @author Keesun Baik
  */
 @Configuration
-public class AppConfig extends WorkConfig {
+@EnableWorkHard(hardness = 10)
+public class AppConfig {
 
-	@Override
-	public WorkHardService workHardService() {
-		WorkHardService service = super.workHardService();
-		service.setHardness(100);
-		return service;
-	}
 }
