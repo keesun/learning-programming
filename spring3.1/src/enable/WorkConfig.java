@@ -21,7 +21,6 @@ public class WorkConfig implements ImportAware {
 
 	@Autowired WorkHardService workHardService;
 
-
 	@Override
 	public void setImportMetadata(AnnotationMetadata importMetadata) {
 		int hardness = (Integer)importMetadata.getAnnotationAttributes(EnableWorkHard.class.getName()).get("hardness");
