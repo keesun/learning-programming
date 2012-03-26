@@ -13,12 +13,17 @@ public class BeanDefinitionUtilsTest {
 	@Test
 	public void componentScanBeans(){
 		System.out.println("Context1");
-		GenericApplicationContext context1 = new GenericXmlApplicationContext("/container/context1.xml");
-		BeanDefinitionUtils.printBeanDefinitions(context1);
+		GenericApplicationContext componentScanContext = new GenericXmlApplicationContext("/container/context1.xml");
+		BeanDefinitionUtils.printBeanDefinitions(componentScanContext);
 
 		System.out.println("Context2");
-		GenericApplicationContext context2 = new GenericXmlApplicationContext("/container/context2.xml");
-		BeanDefinitionUtils.printBeanDefinitions(context2);
+		GenericApplicationContext annotationConfigContext = new GenericXmlApplicationContext("/container/context2.xml");
+		BeanDefinitionUtils.printBeanDefinitions(annotationConfigContext);
+
+
+		for(String name : annotationConfigContext.getBeanDefinitionNames()) {
+			System.out.printf("%s: %s\n", name, annotationConfigContext.getBean(name));
+		}
 	}
 
 }
