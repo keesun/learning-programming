@@ -1,4 +1,4 @@
-package whiteship;
+package whiteship.hibernate4;
 
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 
@@ -10,7 +10,5 @@ import java.util.HashMap;
 public interface SessionFactoryConfigurer {
 
 	void configure(LocalSessionFactoryBuilder sessionFactoryBuilder);
-
-	void hibernateProperties(HashMap<String, Object> hibernateProperties);
 
 }
