@@ -10,10 +10,6 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.PlatformTransactionManager;
 import whiteship.HibernateConfig;
-import whiteship.HibernatePropertiesConfigurer;
-import whiteship.hibernate4.SessionFactoryConfigurer;
-
-import java.util.*;
 
 /**
  * @author Keesun Baik

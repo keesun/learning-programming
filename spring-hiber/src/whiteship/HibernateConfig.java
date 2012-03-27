@@ -8,7 +8,6 @@ import org.springframework.context.annotation.ImportAware;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
-import org.springframework.dao.support.PersistenceExceptionTranslator;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
