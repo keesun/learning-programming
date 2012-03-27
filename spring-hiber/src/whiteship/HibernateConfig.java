@@ -32,7 +32,7 @@ public abstract class HibernateConfig implements ImportAware {
 
 	@Override
 	public void setImportMetadata(AnnotationMetadata importMetadata) {
-		Map<String, Object> enableHibernate = importMetadata.getAnnotationAttributes(EnableHibernate4.class.getName());
+		Map<String, Object> enableHibernate = importMetadata.getAnnotationAttributes(EnableHibernate.class.getName());
 		this.value = (String[]) enableHibernate.get("value");
 		this.packageToScan = (String[]) enableHibernate.get("packageToScan");
 		this.packageToScanClasses = (Class<?>[]) enableHibernate.get("packageToScanClasses");

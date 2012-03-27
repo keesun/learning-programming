@@ -12,7 +12,7 @@ import javax.sql.DataSource;
  * @author Keesun Baik
  */
 @Configuration
-@EnableHibernate4(packageToScanClasses = DomainPackage.class)
+@EnableHibernate(packageToScanClasses = DomainPackage.class)
 public class AppConfig{
 
 	@Bean
