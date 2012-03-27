@@ -21,5 +21,7 @@ public @interface EnableHibernate4 {
 	String[] packageToScan() default {};
 
 	Class<?>[] packageToScanClasses() default {};
+	
+	String propsLocation() default "/hibernate.properties";
 
 }

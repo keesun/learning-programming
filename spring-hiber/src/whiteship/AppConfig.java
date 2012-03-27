@@ -22,4 +22,5 @@ public class AppConfig{
 	public DataSource dataSource(){
 		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.HSQL).build();
 	}
+
 }
