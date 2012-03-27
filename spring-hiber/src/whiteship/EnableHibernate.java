@@ -14,7 +14,6 @@ public @interface EnableHibernate {
 
 	/**
 	 * Alias to packageToScan
-	 * @return
 	 */
 	String[] value() default {};
 

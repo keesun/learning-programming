@@ -35,7 +35,7 @@ public class AppConfigTest {
 		assertNotNull(transactionManager);
 		assertNotNull(exceptionTranslator);
 	}
-	
+
 	@Test
 	public void bookEntity(){
 		Book book = new Book();
