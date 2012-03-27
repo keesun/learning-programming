@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public interface SessionFactoryConfigurer {
 
-	void configure(LocalSessionFactoryBuilder sessionFactoryBean);
+	void configure(LocalSessionFactoryBuilder sessionFactoryBuilder);
 
 	void hibernateProperties(HashMap<String, Object> hibernateProperties);
 
