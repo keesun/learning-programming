@@ -1,11 +1,8 @@
 package whiteship;
 
-import org.springframework.context.annotation.ImportAware;
-import org.springframework.core.type.AnnotationMetadata;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * @author Keesun Baik

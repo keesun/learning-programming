@@ -1,21 +1,18 @@
 package whiteship;
 
-import static org.hibernate.cfg.AvailableSettings.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import whiteship.domain.DomainPackage;
 
 import javax.sql.DataSource;
-import java.util.HashMap;
 
 /**
  * @author Keesun Baik
  */
 @Configuration
-@EnableHibernate4(packageToScan = "whiteship.domain")
+@EnableHibernate4(packageToScanClasses = DomainPackage.class)
 public class AppConfig{
 
 	@Bean

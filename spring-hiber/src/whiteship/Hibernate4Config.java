@@ -5,16 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportAware;
-import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.dao.support.PersistenceExceptionTranslator;
-import org.springframework.orm.hibernate3.HibernateExceptionTranslator;
+import org.springframework.orm.hibernate4.HibernateExceptionTranslator;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
-import org.springframework.scheduling.quartz.SimpleTriggerBean;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
@@ -27,16 +24,16 @@ import java.util.*;
 @Configuration
 public class Hibernate4Config implements ImportAware {
 
-	@Autowired protected DataSource dataSource;
+	@Autowired private DataSource dataSource;
 
 	@Autowired(required = false) private SessionFactoryConfigurer sessionFactoryConfigurer;
-	
+
 	private String[] value;
-	
+
 	private String[] packageToScan;
-	
+
 	private Class<?>[] packageToScanClasses;
-	
+
 	private String propsLocation = "/hibernate.properties";
 
 	@Bean

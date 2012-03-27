@@ -1,8 +1,5 @@
 package whiteship;
 
-import org.springframework.core.env.MapPropertySource;
-import org.springframework.core.env.PropertySource;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 
 import java.util.HashMap;
