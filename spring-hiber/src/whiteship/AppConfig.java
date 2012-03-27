@@ -16,21 +16,10 @@ import java.util.HashMap;
  */
 @Configuration
 @EnableHibernate4(packageToScan = "whiteship.domain")
-public class AppConfig implements SessionFactoryConfigurer {
+public class AppConfig{
 
 	@Bean
 	public DataSource dataSource(){
 		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.HSQL).build();
-	}
-
-	@Override
-	public void configure(LocalSessionFactoryBuilder sessionFactoryBuilder) {
-	}
-
-	@Override
-	public void hibernateProperties(HashMap<String, Object> hibernateProperties) {
-		hibernateProperties.put(HBM2DDL_AUTO, "update");
-		hibernateProperties.put(DIALECT, HibernateDialects.HypersonicSQL);
-		hibernateProperties.put(SHOW_SQL, true);
 	}
 }
