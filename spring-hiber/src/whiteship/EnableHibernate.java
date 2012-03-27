@@ -1,8 +1,6 @@
 package whiteship;
 
 import org.springframework.context.annotation.Import;
-import whiteship.hibernate4.Hibernate4Config;
-import whiteship.hibernate4.HibernateVersion;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

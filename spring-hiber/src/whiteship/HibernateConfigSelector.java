@@ -4,7 +4,6 @@ import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 import whiteship.hibernate3.Hibernate3Config;
 import whiteship.hibernate4.Hibernate4Config;
-import whiteship.hibernate4.HibernateVersion;
 
 /**
  * @author Keesun Baik

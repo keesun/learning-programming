@@ -1,4 +1,4 @@
-package whiteship.hibernate4;
+package whiteship;
 
 /**
  * @author Keesun Baik
