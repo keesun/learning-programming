@@ -37,5 +37,4 @@ public class HibernateDialects {
 	public static final String FrontBase = "org.hibernate.dialect.FrontbaseDialect";
 	public static final String Firebird = "org.hibernate.dialect.FirebirdDialect";
 
-
 }

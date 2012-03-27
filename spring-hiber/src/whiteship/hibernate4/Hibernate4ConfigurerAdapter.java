@@ -8,7 +8,7 @@ import java.util.HashMap;
 /**
  * @author Keesun Baik
  */
-public class SessionFactoryConfigurerAdapter implements SessionFactoryConfigurer, HibernatePropertiesConfigurer {
+public class Hibernate4ConfigurerAdapter implements SessionFactoryConfigurer, HibernatePropertiesConfigurer {
 
 	@Override
 	public void hibernateProperties(HashMap<String, Object> hibernateProperties) {
