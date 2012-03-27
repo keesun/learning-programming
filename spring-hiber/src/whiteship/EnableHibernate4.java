@@ -12,4 +12,14 @@ import java.lang.annotation.RetentionPolicy;
 @Import(Hibernate4Config.class)
 public @interface EnableHibernate4 {
 
+	/**
+	 * Alias to packageToScan
+	 * @return
+	 */
+	String[] value() default {};
+	
+	String[] packageToScan() default {};
+
+	Class<?>[] packageToScanClasses() default {};
+
 }

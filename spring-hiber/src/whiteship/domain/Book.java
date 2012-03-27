@@ -9,12 +9,12 @@ import javax.persistence.Id;
  * @author Keesun Baik
  */
 @Entity
-public class SpringSource {
+public class Book {
 	
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
-	String name;
+	String title;
 
 	public int getId() {
 		return id;
@@ -24,11 +24,11 @@ public class SpringSource {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 }
