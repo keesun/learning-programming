@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableHibernate(packageToScanClasses = DomainPackage.class)
-public class AppConfig{
+public class AppConfig {
 
 	@Bean
 	public DataSource dataSource(){
