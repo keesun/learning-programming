@@ -12,6 +12,7 @@
         <module>concurrency-in-java</module>
         <module>spring3.1</module>
         <module>spring-hiber</module>
+        <module>javassist</module>
     </modules>
 
 
