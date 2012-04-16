@@ -26,7 +26,7 @@ public class WebAppInitAPI {
         @Override
         public void onStartup(ServletContext servletContext) throws ServletException {
             AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
-//            ac.register(AppConfig.java);
+//            ac.register(AppConfig.class);
             ServletContextListener listener = new ContextLoaderListener(ac);
             servletContext.addListener(listener);
 
