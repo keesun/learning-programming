@@ -13,6 +13,9 @@
         <module>spring3.1</module>
         <module>spring-hiber</module>
         <module>javassist</module>
+	    <module>spring3.2</module>
+	    <module>project-euler</module>
+	    <module>learning-tomcat</module>
     </modules>
 
 
