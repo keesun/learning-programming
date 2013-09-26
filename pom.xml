@@ -16,6 +16,7 @@
 	    <module>spring3.2</module>
 	    <module>project-euler</module>
 	    <module>learning-tomcat</module>
+        <module>spring-spock</module>
     </modules>
 
 
