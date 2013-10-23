@@ -2,7 +2,12 @@ package whiteship.aync;
 
 //YahooFinance.java
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFactory;
+import org.springframework.web.client.AsyncRestTemplate;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.concurrent.Future;
 
 public class YahooFinance {
 
@@ -14,5 +19,10 @@ public class YahooFinance {
         String data = restTemplate.getForObject(YAHOO_FINANCE_API + ticker + API_PARAMS, String.class);
         final String[] dataItems = data.split(",");
         return Double.parseDouble(dataItems[dataItems.length - 1]);
+    }
+
+    public static Future<ResponseEntity<String>> getFuturePrice(final String ticker) {
+        AsyncRestTemplate restTemplate = new AsyncRestTemplate(new HttpComponentsAsyncClientHttpRequestFactory());
+        return restTemplate.getForEntity(YAHOO_FINANCE_API + ticker + API_PARAMS, String.class);
     }
 }
