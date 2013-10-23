@@ -22,25 +22,18 @@ public class SequentialRun extends AbstractRun {
         double highPrice = Integer.MIN_VALUE;
         double netAssetValue = 0;
 
-        Map<Integer, Future> futureMap = new HashMap<Integer, Future>();
-
         for(int i = 0; i < Stocks.tickers.length; i++) {
             String ticker = Stocks.tickers[i];
             Future<ResponseEntity<String>> futurePrice = YahooFinance.getFuturePrice(ticker);
-            futureMap.put(i, futurePrice);
-        }
-
-        for(Map.Entry<Integer, Future> entry : futureMap.entrySet()) {
-            double price = getPriceFrom(entry.getValue());
-            Integer index = entry.getKey();
-            netAssetValue += (price * Stocks.shares[index]);
+            double price = getPriceFrom(futurePrice);
+            netAssetValue += (price * Stocks.shares[i]);
             if (price < lowPrice) {
                 lowPrice = price;
-                lowPricedTicker = Stocks.tickers[index];
+                lowPricedTicker = Stocks.tickers[i];
             }
             if (price > highPrice) {
                 highPrice = price;
-                highPricedTicker = Stocks.tickers[index];
+                highPricedTicker = Stocks.tickers[i];
             }
         }
 
