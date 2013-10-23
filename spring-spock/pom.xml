@@ -12,7 +12,8 @@
     <artifactId>spring-spock</artifactId>
 
     <properties>
-        <spring-version>3.2.4.RELEASE</spring-version>
+        <!--<spring-version>3.2.4.RELEASE</spring-version>-->
+        <spring-version>4.0.0.M3</spring-version>
     </properties>
 
     <dependencies>
@@ -51,5 +52,16 @@
             <version>2.2.2</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>http://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>

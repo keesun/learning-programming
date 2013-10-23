@@ -27,7 +27,7 @@ class SampleControllerTest extends Specification {
         response.andExpect(status().isOk())
                 .andExpect(content().string("spock"))
 
-        response.andReturn().response.contentAsString == "hello spock"
+        response.andReturn().response.contentAsString == "spock"
     }
 
 }

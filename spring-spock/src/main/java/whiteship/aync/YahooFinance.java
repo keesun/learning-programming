@@ -1,13 +1,8 @@
-package whiteship;
+package whiteship.aync;
 
 //YahooFinance.java
 
 import org.springframework.web.client.RestTemplate;
-
-import java.net.URL;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.concurrent.Future;
 
 public class YahooFinance {
 

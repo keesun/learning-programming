@@ -19,13 +19,14 @@ public class Accumulator extends UntypedActor {
     String highPricedTicker = "";
     double highPrice = Integer.MIN_VALUE;
     double netAssetValue = 0;
-    akka.dispatch.CompletableFuture<Object> futureResponse;
+//    akka.dispatch.CompletableFuture<Object> futureResponse;
+
 
     public void onReceive(final Object message) {
 
         if (message instanceof FetchResult) {
             numberOfTickers = ((FetchResult) (message)).tickersCount;
-            futureResponse = getContext().getSenderFuture().get();
+//            futureResponse = getContext().getSenderFuture().get();
         }
 
         if (message instanceof StockInfo) {
@@ -48,7 +49,7 @@ public class Accumulator extends UntypedActor {
                 result.put("LOWTICKER", lowPricedTicker);
                 result.put("LOWPRICE", lowPrice);
                 result.put("NAV", netAssetValue);
-                futureResponse.completeWithResult(Collections.unmodifiableMap(result));
+//                futureResponse.completeWithResult(Collections.unmodifiableMap(result));
             }
         }
     }
